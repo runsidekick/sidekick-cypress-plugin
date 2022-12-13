@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "Sidekick Cypress Plugin",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runsidekick/sidekick-cypress-plugin.git"
+  },
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch"
   },
   "author": "Sidekick",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/runsidekick/sidekick-cypress-plugin/issues"
+  },
+  "homepage": "https://github.com/runsidekick/sidekick-cypress-plugin#readme",
   "devDependencies": {
     "@runsidekick/sidekick-client": "^0.0.8",
     "cypress": "11.2.0",
@@ -19,5 +27,9 @@
   "files": [
     "/dist/*"
   ],
-  "types": "dist/types.d.ts"
+  "types": "dist/types.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
 }
