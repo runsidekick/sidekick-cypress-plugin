@@ -1,0 +1,23 @@
+{
+  "name": "@runsidekick/sidekick-cypress-plugin",
+  "version": "1.0.0",
+  "description": "Sidekick Cypress Plugin",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
+  "author": "Sidekick",
+  "license": "ISC",
+  "devDependencies": {
+    "@runsidekick/sidekick-client": "^0.0.8",
+    "cypress": "11.2.0",
+    "debug": "4.3.1",
+    "typescript": "4.5.4",
+    "websocket": "^1.0.34"
+  },
+  "files": [
+    "/dist/*"
+  ],
+  "types": "dist/types.d.ts"
+}
