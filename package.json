@@ -1,5 +1,5 @@
 {
-  "name": "@runsidekick/sidekick-cypress-plugin",
+  "name": "@runsidekick/cypress-plugin",
   "version": "1.0.0",
   "description": "Sidekick Cypress Plugin",
   "main": "dist/index.js",
