@@ -1,6 +1,6 @@
 {
   "name": "@runsidekick/cypress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sidekick Cypress Plugin",
   "main": "dist/index.js",
   "repository": {
