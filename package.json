@@ -1,14 +1,29 @@
 {
-  "name": "@runsidekick/sidekick-cypress-plugin",
+  "name": "@runsidekick/cypress-plugin",
   "version": "1.0.0",
   "description": "Sidekick Cypress Plugin",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runsidekick/sidekick-cypress-plugin.git"
+  },
   "scripts": {
     "build": "tsc",
-    "build:watch": "tsc --watch"
+    "build:watch": "tsc --watch",
+    "release-patch": "release-it --ci --git.commit --git.push --git.tag --git.tagName='v${version}' --github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks",
+    "release-minor": "release-it minor --ci --git.commit --git.push --git.tag --git.tagName='v${version}' --github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks",
+    "release-major": "release-it major --ci --git.commit --git.push --git.tag --git.tagName='v${version}' --github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks",
+    "release-patch-without-tag": "release-it --ci --no-git.commit --no-git.push --no-git.tag --no-git.tagName='v${version}' --no-github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks",
+    "release-minor-without-tag": "release-it minor --ci --no-git.commit --no-git.push --no-git.tag --no-git.tagName='v${version}' --no-github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks",
+    "release-major-without-tag": "release-it major --ci --no-git.commit --no-git.push --no-git.tag --no-git.tagName='v${version}' --no-github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks",
+    "release-dry-run": "release-it --dry-run --ci --no-git.commit --no-git.push --no-git.tag --no-git.tagName='v${version}' --no-github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --no-npm.publish"
   },
   "author": "Sidekick",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/runsidekick/sidekick-cypress-plugin/issues"
+  },
+  "homepage": "https://github.com/runsidekick/sidekick-cypress-plugin#readme",
   "devDependencies": {
     "@runsidekick/sidekick-client": "^0.0.8",
     "cypress": "11.2.0",
@@ -19,5 +34,9 @@
   "files": [
     "/dist/*"
   ],
-  "types": "dist/types.d.ts"
+  "types": "dist/types.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
 }
